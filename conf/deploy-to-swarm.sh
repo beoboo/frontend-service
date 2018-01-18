@@ -2,7 +2,7 @@
 
 set -xeu
 
-ping ${SWARM_URL}
+#ping ${SWARM_URL}
 curl ${SWARM_URL}:2375/images/json
 
 ssh -vvvv -i /root/.ssh/id_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no ${SWARM_USERNAME}@${SWARM_URL} /bin/bash << EOF
