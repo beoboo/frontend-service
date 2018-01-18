@@ -2,6 +2,7 @@
 
 set -xeu
 
+whoami
 #ping ${SWARM_URL} -t 10
 #curl ${SWARM_URL}:2375/images/json
 
