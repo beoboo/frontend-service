@@ -4,6 +4,7 @@ set -xeu
 
 whoami
 ls -la /root/.ssh
+cat /root/.ssh/id_rsa
 #ping ${SWARM_URL} -t 10
 #curl ${SWARM_URL}:2375/images/json
 apt-get update && apt-get install openssl -y
