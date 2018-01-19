@@ -10,7 +10,7 @@ set -xeu
 #apt-get update && apt-get install openssl -y
 #openssl rsa -in /root/.ssh/id_rsa -noout -modulus
 
-docker -H ${SWARM_URL} service create ${SERVICE_EXTRA_CONFIG} --name ${SERVICE_NAME} --detach=false --with-registry-auth ${SERVICE_REPOSITORY}/${SERVICE_NAME}:${SERVICE_TAG}
+docker -H ${SWARM_URL} service create ${SERVICE_EXTRA_CONFIG} --name ${SERVICE_NAME} --with-registry-auth ${SERVICE_REPOSITORY}/${SERVICE_NAME}:${SERVICE_TAG}
 docker -H ${SWARM_URL} service ls
 
 #ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no ${SWARM_USERNAME}@${SWARM_URL} /bin/bash << EOF
